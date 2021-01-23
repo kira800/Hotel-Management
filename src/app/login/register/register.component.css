@@ -1,0 +1,9 @@
+.container{
+    /* margin-top: 5%; */
+    width: 50%;  
+    background-color: white; 
+}
+.container-fluid{
+    padding:7% ;
+    background-color: rgb(117, 255, 202);
+}
