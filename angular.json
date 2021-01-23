@@ -126,5 +126,8 @@
       }
     }
   },
-  "defaultProject": "hotel-management"
+  "defaultProject": "hotel-management",
+  "cli": {
+    "analytics": "8f955a98-9966-4e6f-89b2-189d7dbce6c8"
+  }
 }

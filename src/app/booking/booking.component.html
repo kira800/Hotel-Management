@@ -1,0 +1,26 @@
+<div class="container-fluid">
+    <div class="container">
+
+        <form class="text-center border border-light p-5">
+        
+            <p class="h4 mb-4">Booking</p>
+            
+            <div class="form-group">
+                <input  id="DtChkIn" type="date" class="form-control mb-4" placeholder="Check-In">
+                <input  id="DtChkOut" type="date" class="form-control mb-4"  placeholder="Check-Out">
+                <input  id="age" type="number" class="form-control mb-4"  placeholder="Age">
+                <input id= "noPeople" type="number" class="form-control mb-4" placeholder="No of occupants">
+                <div class="btn btn-mdb-color btn-rounded float-left">
+                    <span>Upload id proof:  </span><input type="file" placeholder="upload id proof">
+                </div>
+              </div>
+              
+              
+          
+            <!-- submit -->
+            <button block="true" type="button" class="btn btn-primary my-4"> Proceed and Pay<a class="nav-link" [routerLink]="['/login']"></a>
+               </button>
+          
+         </form>
+    </div>
+</div>
