@@ -7,3 +7,9 @@
     padding:9% ;
     background-color: rgb(117, 255, 202);;
 }
+.btn-squared-default
+    {
+        width: 100px !important;
+        height: 100px !important;
+        font-size: 10px;
+    }

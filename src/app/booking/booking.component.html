@@ -5,13 +5,27 @@
     <div class="form-group">
       <h2 class="heading">Booking & contact</h2>
       <div class="controls">
-        <input type="text" id="name" class="form-control mb-4" name="name" placeholder="Name" required>
-        <input type="text" id="email" class="form-control mb-4" name="email" placeholder="Email" required>
-        <input type="tel" id="phone" class="form-control mb-4" name="phone" placeholder="Contact" required>
-        <input type="text" id="street" class="form-control mb-4" name="street" placeholder="Street " required>
-        <input type="text" id="city" class="form-control mb-4" name="city" placeholder="City" required>
-        <input type="text" id="post-code" class="form-control mb-4" name="post-code" placeholder="Postal-code" required>
-        <input type="text" id="country" class="form-control mb-4" name="country" placeholder="Country" required>
+        <h1>Hi {{Name}}</h1>
+        <div class="row">
+          <div class="col-md-6 mb-3">
+          <div class="dropdown">
+            <button class="btn-squared-default" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <h4>Select Hotel</h4>
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#">Hotel 1</a>
+              <a class="dropdown-item" href="#">Hotel 2</a>
+              <a class="dropdown-item" href="#">Hotel 3</a>
+            </div>
+          </div>
+        </div>
+         
+            
+            <div class="col-md-6 mb-3">
+            <button class="btn-squared-default"><h4>{{AvailRooms}} Rooms</h4></button>
+
+            </div>
+          </div>
       </div>
     </div>
     <br>
@@ -52,7 +66,7 @@
         <div class="grid">
           
           <div class="controls">
-            <textarea name="comments" class="form-control mb-4" id="comments" placeholder="Please describe your needs e.g. Extra beds, children's cots"></textarea>
+            <textarea name="address" class="form-control mb-4" id="comments" placeholder="Enter complete address of residence"></textarea>
             </div>
             <a class="btn btn-primary" [routerLink]="['/payment']">Save And Proceed</a>
         </div>  

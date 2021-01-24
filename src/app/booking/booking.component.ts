@@ -6,7 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./booking.component.css']
 })
 export class BookingComponent implements OnInit {
-
+  
+  Name:String;
+  AvailRooms:number;
   constructor() { }
 
   ngOnInit(): void {
