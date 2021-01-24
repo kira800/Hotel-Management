@@ -1,26 +1,62 @@
 <div class="container-fluid">
     <div class="container">
-
-        <form class="text-center border border-light p-5">
-        
-            <p class="h4 mb-4">Booking</p>
-            
-            <div class="form-group">
-                <input  id="DtChkIn" type="date" class="form-control mb-4" placeholder="Check-In">
-                <input  id="DtChkOut" type="date" class="form-control mb-4"  placeholder="Check-Out">
-                <input  id="age" type="number" class="form-control mb-4"  placeholder="Age">
-                <input id= "noPeople" type="number" class="form-control mb-4" placeholder="No of occupants">
-                <div class="btn btn-mdb-color btn-rounded float-left">
-                    <span>Upload id proof:  </span><input type="file" placeholder="upload id proof">
-                </div>
-              </div>
-              
-              
-          
-            <!-- submit -->
-            <button block="true" type="button" class="btn btn-primary my-4"> Proceed and Pay<a class="nav-link" [routerLink]="['/login']"></a>
-               </button>
-          
-         </form>
+     <form class="text-center border border-light p-5">
+    
+    <div class="form-group">
+      <h2 class="heading">Booking & contact</h2>
+      <div class="controls">
+        <input type="text" id="name" class="form-control mb-4" name="name" placeholder="Name" required>
+        <input type="text" id="email" class="form-control mb-4" name="email" placeholder="Email" required>
+        <input type="tel" id="phone" class="form-control mb-4" name="phone" placeholder="Contact" required>
+        <input type="text" id="street" class="form-control mb-4" name="street" placeholder="Street " required>
+        <input type="text" id="city" class="form-control mb-4" name="city" placeholder="City" required>
+        <input type="text" id="post-code" class="form-control mb-4" name="post-code" placeholder="Postal-code" required>
+        <input type="text" id="country" class="form-control mb-4" name="country" placeholder="Country" required>
+      </div>
     </div>
+    <br>
+    <hr>
+    <!--  Details -->
+    <div class="form-group">
+      <h2 class="heading">Details</h2>
+      <div class="row">
+      <div class="col-md-6 mb-3">
+        <div class="controls">
+          <label for="arrive" class="label-date"><i class="fa fa-calendar"></i>&nbsp;&nbsp;Arrive</label>
+          <input type="date" id="arrive" class="form-control" name="arrive" value="<?php echo date('Y-m-d'); ?>" required/>
+        </div>      
+      </div>
+      <div class="col-md-6 mb-3">
+        <div class="controls">
+          <label for="depart" class="label-date"><i class="fa fa-calendar"></i>&nbsp;&nbsp;Depart</label>
+          <input type="date" id="depart" class="form-control mb-4" name="depart" value="<?php echo date('Y-m-d'); ?>" required/>
+        </div>      
+      </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div class="controls">
+                     <i class="fa fa-sort"></i>
+                     <label ><i class="fa fa-male"></i>&nbsp;&nbsp;No of occupants</label>
+                     <input type="text" id="people" class="form-control mb-4" required/>
+                </div>      
+            </div>
+
+      <div class="col-md-6 mb-3">
+        <div class="controls">
+            <label ><i class="fa fa-male"></i>&nbsp;&nbsp;Upload Id proff:</label>
+            <input type="file" id="proff" class="form-control mb-4"  value="file" required/>
+        </div>
+        </div>
+       </div>
+        <div class="grid">
+          
+          <div class="controls">
+            <textarea name="comments" class="form-control mb-4" id="comments" placeholder="Please describe your needs e.g. Extra beds, children's cots"></textarea>
+            </div>
+            <a class="btn btn-primary" [routerLink]="['/payment']">Save And Proceed</a>
+        </div>  
+    </div> <!-- /.form-group -->
+  </form>
+</div>
 </div>
