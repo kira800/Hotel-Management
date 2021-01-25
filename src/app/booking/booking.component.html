@@ -52,7 +52,7 @@
                 <div class="controls">
                      <i class="fa fa-sort"></i>
                      <label ><i class="fa fa-male"></i>&nbsp;&nbsp;No of occupants</label>
-                     <input type="text" id="people" class="form-control mb-4" required/>
+                     <input type="textarea" id="people" class="form-control mb-4" required/>
                 </div>      
             </div>
 
@@ -65,10 +65,8 @@
        </div>
         <div class="grid">
           
-          <div class="controls">
-            <textarea name="address" class="form-control mb-4" id="comments" placeholder="Enter complete address of residence"></textarea>
-            </div>
-            <a class="btn btn-primary" [routerLink]="['/payment']">Save And Proceed</a>
+        
+            <a class="btn btn-primary btn-lg btn-block" [routerLink]="['/payment']">Save And Proceed</a>
         </div>  
     </div> <!-- /.form-group -->
   </form>
