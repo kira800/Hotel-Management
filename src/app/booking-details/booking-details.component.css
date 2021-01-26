@@ -1,0 +1,12 @@
+.container{
+    /* margin-top: 8%; */
+    width: 50%;  
+    background-color: white; 
+}
+.container-fluid{
+    padding:9% ;
+    background-color: rgb(117, 255, 202);;
+}
+.table{
+    padding:12%;
+}

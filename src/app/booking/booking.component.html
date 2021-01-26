@@ -20,7 +20,7 @@
           </div>
         </div>
          
-            
+         <!--from admin table-->   
             <div class="col-md-6 mb-3">
             <button class="btn-squared-default"><h4>{{AvailRooms}} Rooms</h4></button>
 
@@ -58,15 +58,15 @@
 
       <div class="col-md-6 mb-3">
         <div class="controls">
-            <label ><i class="fa fa-male"></i>&nbsp;&nbsp;Upload Id proff:</label>
-            <input type="file" id="proff" class="form-control mb-4"  value="file" required/>
+            <label ><i class="fa fa-male"></i>&nbsp;&nbsp;Id proff number</label>
+            <input type="text" id="proff" class="form-control mb-4"  value="file" required/>
         </div>
         </div>
        </div>
         <div class="grid">
           
         
-            <a class="btn btn-primary btn-lg btn-block" [routerLink]="['/payment']">Save And Proceed</a>
+            <button (click)="onSubmit()" class="btn btn-primary btn-lg btn-block" [routerLink]="['/payment']">Save And Proceed</button>
         </div>  
     </div> <!-- /.form-group -->
   </form>

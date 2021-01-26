@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http'
 import { Observable } from 'rxjs';
 
 
@@ -7,10 +7,17 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class CustomerService {
-  private baseUrl = 'http://localhost:8080/hotel-management/api/v1/customers';
+  private baseUrl1 = 'http://localhost:8080/hotel-management/api/v1/customers';
+  private baseUrl2 = 'http://localhost:8080/hotel-management/api/v1/booking';
 
   constructor(private http: HttpClient) { }
   createCustomer(customer: Object): Observable<Object> {
-    return this.http.post(`${this.baseUrl}`,customer);
+    return this.http.post(`${this.baseUrl1}`,customer);
+  }
+  createBooking(booking: Object):Observable<Object>{
+    return this.http.post(`${this.baseUrl2}`,booking);
+  }
+  getBookingDetailsById(id:number):Observable<any>{
+    return this.http.get(`${this.baseUrl2}/${id}`);
   }
 }

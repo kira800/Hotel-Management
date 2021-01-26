@@ -1,0 +1,51 @@
+<div class="container-fluid">
+    <div class="container">
+        <div class="text-center border border-light p-5">
+
+        <p class="h4 mb-4">Booking details</p>
+        </div>
+        <table class="table" *ngFor="let booking of bookings ">
+            <tr>
+                <th scope="col">Name</th>
+                <td>     </td>
+            </tr>
+            <tr>
+                <th scope=col>Email</th>
+                <td>  demo      </td>
+            </tr>
+            <tr>
+                <th scope="col">Arrival Date</th>
+                <td>   {{booking.arrivalDate}}    </td>
+            </tr>
+            <tr>
+                <th scope="col">Departure Date</th>
+                <td>    {{booking.departureDate}}   </td>
+            </tr>
+            <tr>
+                <th scope="col">Payment type</th>
+                <td>    demo    </td>
+            </tr>
+            <tr>
+                <th scope="col">Price</th>
+                <td>     {{booking.price}} </td>
+            </tr>
+            <tr>
+                <th scope="col">Payment status</th>
+                <td>    {{booking.paymentStatus}}  </td>
+            </tr>
+        </table>
+        
+    </div>
+</div>
+
+<!--
+
+    arrivalDate:string;
+    departureDate:string ;
+    hotelName:string;
+    roomType:string;
+    nop:string;
+    aadhar:string;
+    price:DoubleRange;
+    paymentStatus:string;
+-->

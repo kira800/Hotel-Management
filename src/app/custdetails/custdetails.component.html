@@ -44,7 +44,7 @@
 
             <input type="text" id="Address" class="form-control mb-4" placeholder="Address">
 
-            <a class="btn btn-primary btn-block" [routerLink]="['/booking']">Save And Proceed</a>
+            <button (click)="onSubmit()" class="btn btn-primary btn-block" [routerLink]="['/booking']">Save And Proceed</button>
         </form>
     </div>
 </div>

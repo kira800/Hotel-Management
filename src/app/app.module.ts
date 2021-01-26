@@ -12,6 +12,7 @@ import { CustdetailsComponent } from './custdetails/custdetails.component';
 import { CustomerService } from './customer.service';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { BookingDetailsComponent } from './booking-details/booking-details.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { FormsModule } from '@angular/forms';
     RegisterComponent,
     BookingComponent,
     PaymentComponent,
-    CustdetailsComponent
+    CustdetailsComponent,
+    BookingDetailsComponent
   ],
   imports: [
     BrowserModule,

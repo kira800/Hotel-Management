@@ -39,7 +39,7 @@ export class CustdetailsComponent implements OnInit {
   }
 
   gotoList() {
-    this.router.navigate(['/customers']);
+    this.router.navigate(['/booking']);
   }
 }
 
