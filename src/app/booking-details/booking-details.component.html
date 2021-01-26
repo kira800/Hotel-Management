@@ -3,16 +3,20 @@
         <div class="text-center border border-light p-5">
 
         <p class="h4 mb-4">Booking details</p>
+        <h1>{{localValue}}</h1>
         </div>
-        <table class="table" *ngFor="let booking of bookings ">
+        <table class="table" *ngif="customer">
             <tr>
                 <th scope="col">Name</th>
-                <td>     </td>
+                <td> {{customer.firstName}}    </td>
             </tr>
             <tr>
                 <th scope=col>Email</th>
-                <td>  demo      </td>
+                <td> {{customer.lastName}}     </td>
             </tr>
+           
+        </table>
+        <table class="table" *ngif="booking">
             <tr>
                 <th scope="col">Arrival Date</th>
                 <td>   {{booking.arrivalDate}}    </td>
@@ -22,16 +26,12 @@
                 <td>    {{booking.departureDate}}   </td>
             </tr>
             <tr>
-                <th scope="col">Payment type</th>
-                <td>    demo    </td>
+                <th scope="col">City</th>
+                <td>     {{booking.hotelName}} </td>
             </tr>
             <tr>
-                <th scope="col">Price</th>
-                <td>     {{booking.price}} </td>
-            </tr>
-            <tr>
-                <th scope="col">Payment status</th>
-                <td>    {{booking.paymentStatus}}  </td>
+                <th scope="col">Room type</th>
+                <td>   {{booking.roomType}}   </td>
             </tr>
         </table>
         

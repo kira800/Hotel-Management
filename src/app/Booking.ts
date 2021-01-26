@@ -1,4 +1,3 @@
-import { LoginComponent } from "./login/login.component";
 
 export class Booking{
     arrivalDate:string;

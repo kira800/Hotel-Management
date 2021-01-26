@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Booking } from '../Booking';
-import { Customer } from '../Customer';
+import { Booking } from '../booking';
 import { CustomerService } from '../customer.service';
 
 @Component({
@@ -11,7 +10,8 @@ import { CustomerService } from '../customer.service';
 })
 export class BookingComponent implements OnInit {
   id: number;
-  booking :Booking= new Booking();
+  hotelName: string;
+  booking: Booking=new Booking();
   submitted = false;
   
   Name:String;
@@ -19,7 +19,8 @@ export class BookingComponent implements OnInit {
   constructor(private route: ActivatedRoute,private customerService:CustomerService,
     private router:Router) { }
 
-  ngOnInit(): void {
+  ngOnInit(){
+    localStorage.setItem("firstName",this.hotelName);
   }
   newBooking(): void {
     this.submitted = false;
@@ -27,8 +28,7 @@ export class BookingComponent implements OnInit {
   }
 
   save() {
-    this.customerService
-    .createBooking(this.booking).subscribe(data => {
+    this.customerService.createBooking(this.booking).subscribe(data => {
       console.log(data)
       this.booking = new Booking();
       this.gotoList();

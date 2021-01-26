@@ -1,48 +1,35 @@
 <div class="container-fluid">
     <div class="container">
 
-        <form class="text-center border border-light p-5">
+        <form class="text-center border border-light p-5" >
         
             <p class="h4 mb-4">Customer Details</p>
           
             <div class="row">
               <div class="col-md-6 mb-3">
-                <input type="text" class="form-control" id="first_name" placeholder="First Name" required>
+                <input type="text" [(ngModel)]="customer.firstName" class="form-control" id="firstName" name="firstName" placeholder="First Name" required>
                 <div class="invalid-feedback">
                   First Name is required
                 </div>
               </div>
               <div class="col-md-6 mb-3">
-                <input type="text" class="form-control" id="last_name" placeholder="Last Name" required>
+                <input type="text" [(ngModel)]="customer.lastName" class="form-control" id="lastName" name="lastName" placeholder="Last Name" required>
                 <div class="invalid-feedback">
                   Last Name is required
                 </div>
               </div>
             </div>
 
-            <input type="text" id="Email" class="form-control mb-4" placeholder="email">
+            <input type="text" [(ngModel)]="customer.emailId" id="Email" name="emailId"  class="form-control mb-4" placeholder="email">
 
-            <input type="text" id="Contact" class="form-control mb-4" placeholder="Mobile number">
+            <input type="text" [(ngModel)]="customer.phoneNumber" id="Contact" name="phoneNumber"  class="form-control mb-4" placeholder="Mobile number">
 
-            <input type="text" id="Age" class="form-control mb-4" placeholder="Age">
+            <input type="text" [(ngModel)]="customer.age" id="Age" name="age" class="form-control mb-4" placeholder="Age">
 
-
-          
-
-              <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                  <label class="input-group-text" for="inputGroupSelect01">Gender</label>
-                </div>
-                <select class="custom-select" id="inputGroupSelect01">
-                  <option selected>Choose...</option>
-                  <option value="1">Male</option>
-                  <option value="2">Female</option>
-                  <option value="3">Others</option>
-                </select>
-              </div>
+            <input type="text" [(ngModel)]="customer.gender" id="gender" name="gender" class="form-control mb-4" placeholder="gender">
+      
               
-
-            <input type="text" id="Address" class="form-control mb-4" placeholder="Address">
+            <input type="text" [(ngModel)]="customer.address" name="address" id="Address" class="form-control mb-4" placeholder="Address">
 
             <button (click)="onSubmit()" class="btn btn-primary btn-block" [routerLink]="['/booking']">Save And Proceed</button>
         </form>

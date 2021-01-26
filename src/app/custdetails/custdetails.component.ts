@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Customer } from '../Customer';
+import { Customer } from '../customer';
 import { CustomerService } from '../customer.service';
 
 @Component({
@@ -9,7 +9,7 @@ import { CustomerService } from '../customer.service';
   styleUrls: ['./custdetails.component.css']
 })
 export class CustdetailsComponent implements OnInit {
-  customer: Customer = new Customer();
+ customer: Customer=new Customer();
   submitted = false;
   
   constructor(private customerService:CustomerService,

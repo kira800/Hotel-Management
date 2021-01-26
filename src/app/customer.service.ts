@@ -7,8 +7,9 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class CustomerService {
-  private baseUrl1 = 'http://localhost:8080/hotel-management/api/v1/customers';
-  private baseUrl2 = 'http://localhost:8080/hotel-management/api/v1/booking';
+  private baseUrl1 = 'http://localhost:8080/details/addCustomer';
+  private baseUrl2 = 'http://localhost:8080/Bookings/booking';
+  private baseUrl3 = 'http://localhost:8080/Bookings/findbooking';
 
   constructor(private http: HttpClient) { }
   createCustomer(customer: Object): Observable<Object> {
@@ -18,6 +19,6 @@ export class CustomerService {
     return this.http.post(`${this.baseUrl2}`,booking);
   }
   getBookingDetailsById(id:number):Observable<any>{
-    return this.http.get(`${this.baseUrl2}/${id}`);
+    return this.http.get(`${this.baseUrl3}/${id}`);
   }
 }
