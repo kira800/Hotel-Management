@@ -1,44 +1,47 @@
 <div class="container-fluid">
     <div class="container">
-        <div class="text-center border border-light p-5">
+        <div class="text-center border border-light p-5" >
 
         <p class="h4 mb-4">Booking details</p>
-        <h1>{{localValue}}</h1>
+        
         </div>
-        <table class="table" *ngif="customer">
+        <table class="table"  >
             <tr>
-                <th scope="col">Name</th>
-                <td> {{customer.firstName}}    </td>
+                <th scope="col">First Name</th>
+                <td> {{customerService.custData.firstName | json}}    </td>
             </tr>
+            <tr>
+                <th scope="col">Last Name</th>
+                <td> {{customerService.custData.lastName | json}}    </td>
+            </tr>
+            
             <tr>
                 <th scope=col>Email</th>
-                <td> {{customer.lastName}}     </td>
+                <td> {{customerService.custData.emailId | json}}     </td>
             </tr>
-           
-        </table>
-        <table class="table" *ngif="booking">
+          
             <tr>
                 <th scope="col">Arrival Date</th>
-                <td>   {{booking.arrivalDate}}    </td>
+                <td>   {{customerService.bookingData.arrivalDate | json}}   </td>
             </tr>
             <tr>
                 <th scope="col">Departure Date</th>
-                <td>    {{booking.departureDate}}   </td>
+                <td>    {{customerService.bookingData.departureDate | json}}  </td>
             </tr>
             <tr>
                 <th scope="col">City</th>
-                <td>     {{booking.hotelName}} </td>
+                <td>     {{customerService.bookingData.hotelName | json}} </td>
             </tr>
             <tr>
                 <th scope="col">Room type</th>
-                <td>   {{booking.roomType}}   </td>
+                <td>   {{customerService.bookingData.roomType | json}}   </td>
             </tr>
         </table>
         
     </div>
 </div>
 
-<!--
+<!-- 
 
     arrivalDate:string;
     departureDate:string ;

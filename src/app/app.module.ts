@@ -7,7 +7,6 @@ import { LoginComponent } from './login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RegisterComponent } from './login/register/register.component';
 import { BookingComponent } from './booking/booking.component';
-import { PaymentComponent } from './payment/payment.component';
 import { CustdetailsComponent } from './custdetails/custdetails.component';
 import { CustomerService } from './customer.service';
 import { HttpClientModule } from '@angular/common/http';
@@ -21,7 +20,6 @@ import { BookingDetailsComponent } from './booking-details/booking-details.compo
     LoginComponent,
     RegisterComponent,
     BookingComponent,
-    PaymentComponent,
     CustdetailsComponent,
     BookingDetailsComponent
   ],

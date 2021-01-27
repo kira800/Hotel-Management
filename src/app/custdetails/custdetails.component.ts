@@ -12,7 +12,7 @@ export class CustdetailsComponent implements OnInit {
  customer: Customer=new Customer();
   submitted = false;
   
-  constructor(private customerService:CustomerService,
+  constructor(public customerService:CustomerService,
     private router:Router) { }
 
   ngOnInit(): void {

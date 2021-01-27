@@ -6,7 +6,7 @@ import { CustdetailsComponent } from './custdetails/custdetails.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './login/register/register.component';
-import { PaymentComponent } from './payment/payment.component';
+
 
 
 const routes: Routes = [
@@ -14,7 +14,7 @@ const routes: Routes = [
   {path: 'login',component: LoginComponent},
   {path: 'register', component: RegisterComponent},
   {path: 'booking',component:BookingComponent},
-  {path: 'payment',component:PaymentComponent},
+  
   {path: 'custdetails',component:CustdetailsComponent},
   {path: 'booking-details',component:BookingDetailsComponent}
 ];

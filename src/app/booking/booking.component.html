@@ -10,7 +10,7 @@
           
 
         <label for="sel1">Select City</label>
-        <select class="form-control" id="sel1" [(ngModel)]="booking.hotelName" name="hotelName">
+        <select class="form-control" id="sel1" [(ngModel)]="booking.hotelName" name="hotelName" >
           <option  value="Pune">Pune</option>
           <option value="Mumbai">Mumbai</option>
           <option value="Goa">Goa</option>
@@ -71,7 +71,7 @@
         <div class="grid">
           
         
-            <button (click)="onSubmit()" class="btn btn-primary btn-lg btn-block" [routerLink]="['/payment']">Save And Proceed</button>
+            <button (click)="onSubmit()" class="btn btn-primary btn-lg btn-block" [routerLink]="['/booking-details']">Save And Proceed</button>
         </div>  
     </div> <!-- /.form-group -->
   </form>

@@ -10,17 +10,23 @@ import { CustomerService } from '../customer.service';
 })
 export class BookingComponent implements OnInit {
   id: number;
-  hotelName: string;
+  hotelName="";
+  arrivalDate="";
+  departureDate="";
+  nop="";
+  aadhar="";
+
   booking: Booking=new Booking();
   submitted = false;
-  
+  parentPosts:any[]=[];
   Name:String;
   AvailRooms:number;
-  constructor(private route: ActivatedRoute,private customerService:CustomerService,
+  constructor(private route: ActivatedRoute,public customerService:CustomerService,
     private router:Router) { }
 
   ngOnInit(){
-    localStorage.setItem("firstName",this.hotelName);
+    sessionStorage.setItem("firstName",this.hotelName);
+    console.log(this.hotelName)
   }
   newBooking(): void {
     this.submitted = false;
@@ -30,6 +36,7 @@ export class BookingComponent implements OnInit {
   save() {
     this.customerService.createBooking(this.booking).subscribe(data => {
       console.log(data)
+      this.parentPosts.push(data);
       this.booking = new Booking();
       this.gotoList();
     }, 
@@ -38,7 +45,7 @@ export class BookingComponent implements OnInit {
 
   onSubmit() {
     this.submitted = true;
-    this.save();    
+    this.save();   
   }
 
   gotoList() {

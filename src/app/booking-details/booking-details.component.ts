@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit ,Input} from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Booking } from '../booking';
@@ -11,17 +11,22 @@ import { CustomerService } from '../customer.service';
   styleUrls: ['./booking-details.component.css']
 })
 export class BookingDetailsComponent implements OnInit {
+  
+  @Input() childPost: any[]=[];
+  
   bookings: Observable<Booking>;
   id:27;
   customer: Customer 
   booking: Booking
-  localValue:string ="";
+  sessionValue:string ="";
   constructor(private route: ActivatedRoute,private router: Router,
-    private customerService:CustomerService) { }
+    public customerService:CustomerService) { }
 
  
   ngOnInit(): void {
-    this.localValue=localStorage.getItem("hotelName");
+    this.sessionValue=sessionStorage.getItem("hotelName");
+    this.customerService.getBookingDetailsById(1);
+    
   //  this.customer=new Customer();
   //  this.id=this.route.snapshot.params['id'];
   //  this.customerService.getBookingDetailsById(this.id).subscribe(data => {
